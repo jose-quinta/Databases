@@ -1,0 +1,10 @@
+USE school;
+
+CREATE TABLE IF NOT EXISTS classrooms (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    code VARCHAR(20) NOT NULL UNIQUE,
+    building VARCHAR(100),
+    capacity INTEGER NOT NULL,
+    type VARCHAR(50) DEFAULT 'classroom',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

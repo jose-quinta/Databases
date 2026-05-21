@@ -1,0 +1,13 @@
+USE ecommerce;
+
+CREATE TABLE IF NOT EXISTS customers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL UNIQUE,
+    birth_date DATE,
+    gender VARCHAR(10),
+    newsletter BOOLEAN DEFAULT FALSE,
+    total_purchases DECIMAL(12,2) DEFAULT 0.00,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

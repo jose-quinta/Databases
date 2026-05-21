@@ -1,0 +1,12 @@
+USE ecommerce;
+
+CREATE TABLE IF NOT EXISTS product_images (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    product_id INTEGER NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    alt_text VARCHAR(150),
+    is_primary BOOLEAN DEFAULT FALSE,
+    sort_order INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);

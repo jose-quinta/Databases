@@ -1,0 +1,12 @@
+USE school;
+
+CREATE TABLE IF NOT EXISTS payments (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    invoice_id INTEGER NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+    method VARCHAR(50) NOT NULL,
+    transaction_id VARCHAR(100),
+    paid_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (invoice_id) REFERENCES invoices(id)
+);

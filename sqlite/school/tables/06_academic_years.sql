@@ -1,0 +1,10 @@
+USE school;
+
+CREATE TABLE IF NOT EXISTS academic_years (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(20) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    is_current BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
