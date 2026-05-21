@@ -11,26 +11,23 @@ PRAGMA foreign_keys = ON;
 -- TABLES (order respects foreign key dependencies)
 -- ============================================================
 
--- Independent tables
-.read tables/roles.sql
-.read tables/permissions.sql
-.read tables/categories.sql
-.read tables/coupons.sql
-
--- Dependent tables
-.read tables/role_permission.sql
-.read tables/users.sql
-.read tables/products.sql
-.read tables/customers.sql
-.read tables/addresses.sql
-.read tables/carts.sql
-.read tables/product_images.sql
-.read tables/cart_items.sql
-.read tables/reviews.sql
-.read tables/orders.sql
-.read tables/order_items.sql
-.read tables/payments.sql
-.read tables/coupon_usages.sql
+.read tables/01_roles.sql
+.read tables/02_permissions.sql
+.read tables/03_categories.sql
+.read tables/04_coupons.sql
+.read tables/05_role_permission.sql
+.read tables/06_users.sql
+.read tables/07_products.sql
+.read tables/08_customers.sql
+.read tables/09_addresses.sql
+.read tables/10_carts.sql
+.read tables/11_product_images.sql
+.read tables/12_cart_items.sql
+.read tables/13_reviews.sql
+.read tables/14_orders.sql
+.read tables/15_order_items.sql
+.read tables/16_payments.sql
+.read tables/17_coupon_usages.sql
 
 -- ============================================================
 -- TRIGGERS
